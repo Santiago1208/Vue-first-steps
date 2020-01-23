@@ -1,4 +1,4 @@
-# Vue First Steps
+Vue First Steps
 
 ## Description
 
@@ -20,7 +20,7 @@ This repository is the notebook were you can find the main concepts of Vue.js.
 
 All interfaces could be decomposed in a tree of components.
 
-![image-20200123154641706](C:\Users\santiago.restrepo\AppData\Roaming\Typora\typora-user-images\image-20200123154641706.png)
+![vue-components](https://es.vuejs.org/images/components.png)
 
 *Image extracted from https://es.vuejs.org/v2/guide/index.html#*
 
@@ -72,7 +72,7 @@ var app = new Vue({
 })
 ```
 
-It is supposed that the parent component define an structure (JSON object) of a `todo` with the text attribute.
+It is supposed that the parent component define an structure (JSON object) of a `task` with the text attribute.
 
 [HTML simulating the parent component]
 
