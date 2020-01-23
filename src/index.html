@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First steps Vue.js</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- #region Bootstrap styles-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- #endregion Bootstrap styles-->
+</head>
+<body>
+    <div id="app">
+        <h5>Binding text</h5>
+        <span>
+            {{ message }}
+        </span>
+        <br>
+        
+        <h5>Binding properties</h5>
+        <span v-bind:title="tooltip">
+            Pass the mouse over the text to see how its "title" property was binded
+        </span>
+        <br>
+        
+        <h5>v-if Directive</h5>
+        <span v-if="seen">
+            You can see the span
+        </span>
+        <br>
+        
+        <h5>v-for Directive</h5>
+        <ol>
+            <li v-for="(task, index) in tasks" :key="index">
+                {{ task.content }}
+            </li>
+        </ol>
+        
+        <h5>v-on Directive</h5>
+        <p>
+            {{ message }}
+        </p>
+        <button class="btn btn-primary" v-on:click="reverseMessage">Reverse Message</button>
+        
+        <h5>v-model Directive</h5>
+        <p>{{ inputText }}</p>
+        <input type="text" v-model="inputText"/>
+
+        <h5>Components</h5>
+        <ol>
+            <task-item v-for="task in tasks" :key="task.id" v-bind:task="task"/>
+        </ol>
+    </div>
+    
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Vue script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="index.js"></script>
+
+</body>
+</html>
